@@ -1,0 +1,68 @@
+"For each exercise, type conversion must be handled using a specific type of casting.
+Your choice will be reviewed during the defense."
+	C++ has four C++ casts, and this module is trying to teach when each should be used.
+		static_cast: Ex. int i = static_cast<int>(d); 
+						DO NOT DO: int i = (int)d; // C-style cast
+		dynamic_cast
+		const_cast
+		reinterpret_cast
+
+
+
+What is a static function?
+A static member function belongs to the class, not an object.
+Normal member function:
+Dog d;
+d.bark();
+
+Static member:
+Math::sqrt(...);
+ScalarConverter::convert(...);
+
+No object exists.
+You're just calling a utility function that lives inside the class.
+
+
+
+
+Data Structures:
+Data structures are used to store and organize data. An array is an example of a data structure, which allows multiple elements to be stored in a single variable.
+C++ includes many other data structures as well, each is used to handle data in different ways.
+These are part of the C++ STL, which stands for The Standard Template Library.
+
+C++ STL
+STL is a library that consist of different data structures and algorithms to effectively store and manipulate data.
+If we say that data structures store data, we can say that algorithms are used to solve different problems, often by searching through and manipulating those data structures.
+Using the right data structure and algorithm makes your program run faster, especially when working with lots of data.
+The most common data structures are:
+https://www.w3schools.com/CPP/cpp_data_structures.asp 
+
+
+
+
+What is a scalar type?
+A scalar is simply a value that represents one single thing, as opposed to a collection.
+Examples:
+char
+int
+float
+double
+bool
+pointer
+
+Not scalar:
+array
+vector
+string
+struct
+class
+
+In this exercise they specifically mean
+char
+int
+float
+double
+
+
+
+

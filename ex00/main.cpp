@@ -1,25 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scalarconverter.cpp                                :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 23:04:40 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/16 01:27:36 by djanardh         ###   ########.fr       */
+/*   Created: 2026/07/16 01:41:36 by djanardh          #+#    #+#             */
+/*   Updated: 2026/07/16 01:44:01 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
 
-ScalarConverter::ScalarConverter() {}
-
-ScalarConverter::ScalarConverter(const ScalarConverter& other)
-{}
-
-ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other)
+int main(int argc, char* argv[])
 {
-	
-}
 
-ScalarConverter::~ScalarConverter() {}
+}
