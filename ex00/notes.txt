@@ -22,6 +22,7 @@ ScalarConverter::convert(...);
 No object exists.
 You're just calling a utility function that lives inside the class.
 
+The class is just a container for static functions.
 
 
 
@@ -66,3 +67,67 @@ double
 
 
 
+The four C++ casts
+Before C++, people wrote
+int i = (int)d;
+The problem is that this one syntax could mean lots of different things. C++ introduced four different casts, each with one clear purpose.
+Think of them as four different tools.
+
+① static_cast
+Purpose: Normal, safe conversions that the compiler understands.
+Examples:
+double d = 4.2;
+int i = static_cast<int>(d);
+or
+int i = 65;
+char c = static_cast<char>(i);
+or
+float f = static_cast<float>(i);
+This is exactly what you're doing in this exercise.
+
+② dynamic_cast
+Used with inheritance.
+Imagine:
+Animal
+   ↑
+ Dog
+Suppose you have
+Animal* a = new Dog();
+Later you wonder
+"Is this Animal actually a Dog?"
+You can ask
+Dog* d = dynamic_cast<Dog*>(a);
+If it really is a Dog, great.
+Otherwise you get nullptr.
+You'll probably use this in a later CPP module.
+
+③ const_cast
+Only changes constness.
+Example
+const int x = 5;
+Normally
+x = 6;
+is illegal.
+const_cast can remove const (although modifying an originally const object is often undefined behavior).
+It's a very specialized cast.
+
+④ reinterpret_cast
+This one is the scary one.
+It basically says
+"Treat these bits as though they were another completely unrelated type."
+For example
+int x = 42;
+int* p = &x;
+char* c = reinterpret_cast<char*>(p);
+Now you're pretending an int* is a char*.
+Or
+long address = 123456;
+int* p = reinterpret_cast<int*>(address);
+You're literally pretending some number is a memory address.
+This is extremely powerful and extremely dangerous.
+You almost never use it unless you're doing low-level programming.
+
+So if an evaluator asks
+Why static_cast instead of reinterpret_cast?
+A good answer is
+Because I'm converting between compatible scalar types (int, char, float, double). reinterpret_cast is for reinterpreting memory as another type, not for numeric conversions.

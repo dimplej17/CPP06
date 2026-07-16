@@ -6,20 +6,8 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 23:04:40 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/16 01:27:36 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/16 02:13:45 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ScalarConverter.hpp"
-
-ScalarConverter::ScalarConverter() {}
-
-ScalarConverter::ScalarConverter(const ScalarConverter& other)
-{}
-
-ScalarConverter& ScalarConverter::operator=(const ScalarConverter& other)
-{
-	
-}
-
-ScalarConverter::~ScalarConverter() {}
