@@ -131,3 +131,6 @@ So if an evaluator asks
 Why static_cast instead of reinterpret_cast?
 A good answer is
 Because I'm converting between compatible scalar types (int, char, float, double). reinterpret_cast is for reinterpreting memory as another type, not for numeric conversions.
+
+
+enums? - then, scoped vs. unscoped enums
