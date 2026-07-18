@@ -1,6 +1,6 @@
 NAME = ex00
 
-SRCS = main.cpp scalarconverter.cpp
+SRCS = main.cpp ScalarConverter.cpp
 
 OBJS = $(SRCS:%.cpp=%.o)
 

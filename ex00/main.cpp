@@ -6,7 +6,7 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/16 01:41:36 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/18 13:59:47 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/18 19:32:12 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,11 @@
 
 int main(int argc, char* argv[])
 {
-	if (argc == 1)
-	{
-		std::cout << "Please enter input" << std::cout;
-		return ;
-	}
 	if (argc != 2)
 	{
-		std::cout << "Invalid input" << std::cout;
-		return ;
+		std::cout << "Usage: ./ex00 <input>" << std::endl;
+		return (1);
 	}
 	ScalarConverter::convert(argv[1]);
+	return (0);
 }
