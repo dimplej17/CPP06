@@ -1,0 +1,6 @@
+uintptr_t: is an unsigned integer type such that any valid (void *) value can be converted to this type and then converted back. 
+It is capable of storing values in the range [0, UINTPTR_MAX]. The macros [U]INTPTR_WIDTH expand to the width in bits of these types.
+
+The intptr_t and uintptr_t types are extremely useful for casting pointers when you want to do address arithmetic. 
+They should be used instead of long or unsigned long for this purpose. Use of uintptr_t for casting is usually safer than intptr_t , 
+especially for comparisons.

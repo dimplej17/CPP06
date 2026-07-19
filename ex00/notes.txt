@@ -209,3 +209,16 @@ int main() {
     
     return 0;
 }
+
+
+
+What does static_cast<char>(d) do?
+When you convert a floating-point type to an integer type (and char is an integral type), 
+the fractional part is discarded (truncated toward zero).
+So conceptually, C++ does this:
+65.9
+   ↓
+65
+Not
+66
+There is no rounding.
