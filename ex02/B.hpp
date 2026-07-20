@@ -6,12 +6,18 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 12:49:47 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/20 12:50:02 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/20 15:29:58 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef B_HPP
 #define B_HPP
 
+#include "Base.hpp"
+
+class B : public Base
+{
+	
+};
 
 #endif

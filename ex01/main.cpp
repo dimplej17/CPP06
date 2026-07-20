@@ -6,13 +6,13 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 12:43:03 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/20 15:23:18 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/20 16:01:32 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Serializer.hpp"
  
-int main()
+int main (void)
 {
 	Data original;
 	original.value = "answer";

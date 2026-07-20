@@ -78,3 +78,6 @@ Data* ptr2
 (value = address 0x1000)
 Notice that the value never changes.
 Only the type changes.
+
+
+deserialize() reconstructs a pointer to the same object, not a copy of the object.

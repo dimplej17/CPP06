@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scalarconverter.cpp                                :+:      :+:    :+:   */
+/*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 23:04:40 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/18 19:39:15 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/20 16:41:56 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ static std::string formatDouble(double d)
 	std::ostringstream oss;
 	oss << d;
 	std::string s = oss.str();
-	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos)
+	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos) // ???
 		s += ".0";
 	return s;
 }
@@ -47,7 +47,7 @@ static std::string formatFloat(float f)
 	std::ostringstream oss;
 	oss << f;
 	std::string s = oss.str();
-	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos)
+	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos) // ???
 		s += ".0";
 	return s + "f";
 }
@@ -197,9 +197,10 @@ void ScalarConverter::convert(std::string input)
 			return;
 		}
 	}
-	catch (const std::exception&)
+	catch (const std::exception& e)
 	{
-		std::cout << "Invalid input" << std::endl;
+		std::cout << e.what() << std::endl;
+		// std::cout << "Invalid input" << std::endl;
 		return;
 	}
 

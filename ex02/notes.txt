@@ -1,0 +1,8 @@
+"Remember what the * operator does." - does it dereference the pointer when I use it?
+Exactly.
+If
+Base* random_class = generate();
+then
+*random_class
+means
+"Give me the object that random_class points to."
