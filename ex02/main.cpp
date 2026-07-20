@@ -6,7 +6,7 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/20 15:58:26 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/20 17:22:34 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/20 17:28:29 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ void identify(Base& p)
 {
 	try 
 	{
+		// If True (Success): Returns a valid reference to the actual object of type A (or its derived type).
+		// If False (Failure): Throws a std::bad_cast exception.
 		A& a = dynamic_cast<A&>(p);
 		(void)a;
 		std::cout << "A" << std::endl;
