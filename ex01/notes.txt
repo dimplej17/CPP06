@@ -4,3 +4,77 @@ It is capable of storing values in the range [0, UINTPTR_MAX]. The macros [U]INT
 The intptr_t and uintptr_t types are extremely useful for casting pointers when you want to do address arithmetic. 
 They should be used instead of long or unsigned long for this purpose. Use of uintptr_t for casting is usually safer than intptr_t , 
 especially for comparisons.
+
+
+So what is uintptr_t?
+It's an integer type that is guaranteed to be large enough to store a pointer value.
+For example (numbers are made up):
+Pointer: 0x7ffee4ab1230
+can also be thought of as: 140732734067248 That's just the address written differently.
+
+
+Notice the subject says: create a non-empty Data structure
+Why?
+Imagine
+struct Data
+{
+};
+That's empty.
+They don't want that because it's too trivial.
+Instead they want something like
+struct Data
+{
+    int id;
+    std::string name;
+};
+(or any data members you choose).
+The contents don't actually matter.
+The exercise isn't about the data.
+It's about the address of the object!!!
+
+
+
+The important thing is to separate the value from how it's displayed.
+Suppose your object lives at address
+0x7ffeefbff5c8
+That is already just a number.
+Hexadecimal (0x...) is simply one way of writing that number.
+For example:
+Hex:      0x2A
+Decimal:  42
+Binary:   00101010
+These are three representations of exactly the same value.
+
+So when you do something like
+Data* ptr = &data;
+you have a pointer whose value might be
+0x1000
+When you serialize it, conceptually you're saying:
+Pointer
+    ↓
+Integer with the same numeric value
+Not
+Hex
+ ↓
+Decimal
+because there is no conversion between number bases happening as part of the cast. The address is already a numeric value. 
+You're only changing the type that C++ uses to interpret it!!!!!!!
+
+Think of it like this:
+Data object
+     ▲
+     │
+Data* ptr
+(value = address 0x1000)
+
+serialize()
+
+uintptr_t raw
+(value = address 0x1000, but stored as an integer)
+
+deserialize()
+
+Data* ptr2
+(value = address 0x1000)
+Notice that the value never changes.
+Only the type changes.

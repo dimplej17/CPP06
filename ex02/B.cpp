@@ -1,33 +1,14 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   serializer.hpp                                     :+:      :+:    :+:   */
+/*   B.cpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/15 17:21:49 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/20 15:21:14 by djanardh         ###   ########.fr       */
+/*   Created: 2026/07/20 12:50:07 by djanardh          #+#    #+#             */
+/*   Updated: 2026/07/20 12:50:17 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef SERIALIZER_HPP
-#define SERIALIZER_HPP
+#include "B.hpp"
 
-#include <iostream>
-#include <string>
-#include "Data.hpp"
-
-class Serializer
-{
-	private:
-	Serializer() = delete;
-	Serializer(const Serializer& other) = delete;
-	Serializer& operator=(const Serializer& other) = delete;
-	~Serializer() = delete;
-	
-	public:
-	static uintptr_t serialize(Data* ptr);
-	static Data* deserialize(uintptr_t raw);
-};
-
-#endif
