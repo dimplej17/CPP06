@@ -6,7 +6,7 @@
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 23:04:40 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/20 16:41:56 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/22 17:20:47 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ static bool isFloatOverflow(double num)
 
 static std::string formatDouble(double d)
 {
-	if (std::isnan(d))
+	if (std::isnan(d)) // not a number value
 		return "nan";
 	if (std::isinf(d))
 		return (d < 0 ? "-inf" : "inf");
-	std::ostringstream oss;
-	oss << d;
-	std::string s = oss.str();
-	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos) // ???
+	std::ostringstream oss; 
+	oss << d; // formats the double into a string using the default std::cout formatting (42.0 -> 42)
+	std::string s = oss.str(); // pulls the collected text back out of the stream as an actual std::string
+	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos) // npos = special value = not found
 		s += ".0";
 	return s;
 }
@@ -47,7 +47,7 @@ static std::string formatFloat(float f)
 	std::ostringstream oss;
 	oss << f;
 	std::string s = oss.str();
-	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos) // ???
+	if (s.find('.') == std::string::npos && s.find('e') == std::string::npos)
 		s += ".0";
 	return s + "f";
 }

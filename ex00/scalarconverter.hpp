@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   scalarconverter.hpp                                :+:      :+:    :+:   */
+/*   ScalarConverter.hpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: djanardh <djanardh@student.42heilbronn.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/15 23:04:56 by djanardh          #+#    #+#             */
-/*   Updated: 2026/07/18 19:17:57 by djanardh         ###   ########.fr       */
+/*   Updated: 2026/07/22 17:12:15 by djanardh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include <iostream>
 #include <string>
 #include <limits>
-#include <cmath>
+#include <cmath> // nan
 #include <cctype>
 #include <sstream>
 
